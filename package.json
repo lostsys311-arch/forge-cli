@@ -13,8 +13,8 @@
   },
   "scripts": {
     "build": "tsc",
-    "build:bundle": "esbuild dist/index.js --bundle --platform=node --target=node22 --outfile=dist/bundle/forge.cjs",
-    "build:exe": "npm run build && npm run build:bundle && mkdir -p dist/exe 2>nul && pkg dist/bundle/forge.cjs --targets node22-win-x64 --output dist/exe/forge.exe --public",
+    "build:bundle": "esbuild dist/index.js --bundle --platform=node --target=node20 --outfile=dist/bundle/forge.cjs",
+    "build:exe": "npm run build && npm run build:bundle && mkdir -p dist/exe 2>nul && pkg dist/bundle/forge.cjs --targets node20-win-x64 --output dist/exe/forge.exe --public",
     "dev": "tsx watch src/index.ts",
     "start": "node dist/index.js",
     "lint": "biome check src/",
