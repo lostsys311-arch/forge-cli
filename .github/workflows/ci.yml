@@ -63,7 +63,7 @@ jobs:
         run: npx esbuild dist/index.js --bundle --platform=node --target=node20 --outfile=dist/bundle.cjs
 
       - name: Compile to EXE
-        run: npx pkg dist/bundle.cjs --targets node20-win-x64 --output forge.exe --public
+        run: npx nexe dist/bundle.cjs --target windows-x64 --output forge.exe
 
       - name: Upload EXE
         uses: actions/upload-artifact@v4
